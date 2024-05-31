@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run Scripts</title>
+</head>
+<body>
+    <h1>CLICK HERE!</h1>
+    <button onclick="runScripts()">START</button>
+    <pre id="output"></pre>
+
+    <script>
+        function runScripts() {
+            fetch('/run_scripts')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').innerText = data;
+                });
+        }
+    </script>
+</body>
+</html>
