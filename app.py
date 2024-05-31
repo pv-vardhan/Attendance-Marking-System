@@ -9,11 +9,11 @@ def index():
     return render_template('index.html')
 
 
-#@app.route('/run_scripts')
-#def run_scripts():
+@app.route('/run_scripts')
+def run_scripts():
     # Execute main.py
-#    main_result = subprocess.run(['python3', 'main.py'], capture_output=True, text=True)
-
+    main_result = subprocess.run(['python3', 'main.py'], capture_output=True, text=True)
+    return main_result.stdout
     # Execute Program.java
 
 #    java_result = subprocess.run(['python3', 'Checkbox.py'], capture_output=True, text=True)
