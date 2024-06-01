@@ -5,7 +5,7 @@ import os
 
 # from PIL import ImageGrab
 
-path = 'Training_images'
+path = '../Training_images'
 images = []
 classNames = []
 myList = os.listdir(path)
